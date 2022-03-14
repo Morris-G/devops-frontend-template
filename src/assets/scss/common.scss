@@ -1,0 +1,120 @@
+.mr15 {
+    margin-right: 15px;
+}
+.mr10 {
+    margin-right: 10px;
+}
+.mr5 {
+    margin-right: 5px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.mt5 {
+    margin-top: 5px;
+}
+
+.ml15 {
+    margin-left: 15px;
+}
+.ml10 {
+    margin-left: 10px;
+}
+.ml5 {
+    margin-left: 5px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+.mb10 {
+    margin-bottom: 10px;
+}
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.g-pointer {
+    cursor: pointer;
+}
+
+.avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 0;
+    overflow: hidden;
+    display: inline-block;
+    margin: -6px 0;
+    &-letter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-size: 12px;
+        &-green {
+            background-color: #30d878;
+        }
+        &-yellow {
+            background-color: #ffb400;
+        }
+        &-red {
+            background-color: #ff5656;
+        }
+        &-blue {
+            background-color: #3c96ff;
+        }
+    }
+}
+/*bk-popver 组件的li类名*/
+.dot-menu-trigger {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0;
+    cursor: pointer;
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: currentColor;
+        -webkit-box-shadow: 0 -4px 0 currentColor,0 4px 0 currentColor;
+        box-shadow: 0 -4px 0 currentColor,0 4px 0 currentColor;
+    }
+    &:hover{
+        color: #3a84ff;
+        background-color: #dcdee5;
+    }
+}
+.dot-menu-item {
+    line-height: 26px;
+    padding: 0 10px;
+    &:hover {
+        color: #3a84ff;
+        background: rgba(58, 132, 255, 0.1);
+    }
+}
+
+//code-mirror样式
+.CodeMirror {
+    border: 1px solid #ddd;
+    .CodeMirror-gutters {
+        border-left: 0 !important;
+    }
+    .CodeMirror-linenumbers {
+        width: 32px !important;
+    }
+}
+.code-mirror-textarea {
+    opacity: 0;
+}
