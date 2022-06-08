@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
     publicPath: '/devops/',
     productionSourceMap: false,
@@ -15,11 +17,19 @@ module.exports = {
                 args[0].timeStamp = +new Date()
                 return args
             })
-        const svgRule = config.module.rule('svg')
-        svgRule.uses.clear()
-        svgRule
+
+        config.module.rule('cw-svg')
+            .test(/\.svg$/)
+            .include
+            .add(path.resolve(__dirname, 'src'))
+            .end()
             .use('svg-sprite-loader')
             .loader('svg-sprite-loader')
+
+        config.module.rule('svg')
+            .exclude
+            .add(path.resolve(__dirname, 'src'))
+            .end()
     },
     devServer: {
         port: 8866,
